@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<SplitPane dividerPositions="0.2585669781931464" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="531.0" prefWidth="644.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <ListView fx:id="listView" layoutY="-3.0" prefHeight="531.0" prefWidth="169.0" />
+         </children>
+    </AnchorPane>
+    <AnchorPane fx:id="descriptionArea" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="457.0" style="-fx-background-color: #4a7ba6;">
+         <children>
+            <Pane fx:id="jobDetailArea" prefHeight="398.0" prefWidth="476.0">
+               <children>
+                  <TextField fx:id="positionName" layoutX="17.0" layoutY="36.0" />
+                  <TextField fx:id="companyName" layoutX="16.0" layoutY="95.0" />
+                  <TextArea fx:id="jobDescription" layoutX="14.0" layoutY="156.0" prefHeight="179.0" prefWidth="388.0" />
+                  <Text fill="WHITE" layoutX="11.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Position Name">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Text>
+                  <Text fill="WHITE" layoutX="14.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Company Name">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Text>
+                  <Text fill="WHITE" layoutX="12.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Job Description">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Text>
+                  <Text fill="WHITE" layoutX="205.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Application Status">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Text>
+                  <Text fill="WHITE" layoutX="214.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date Applied">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font></Text>
+                  <RadioButton fx:id="applied" layoutX="206.0" layoutY="35.0" mnemonicParsing="false" prefHeight="6.0" prefWidth="74.0" text="Applied" textFill="WHITE" />
+                  <RadioButton fx:id="interviewing" layoutX="206.0" layoutY="59.0" mnemonicParsing="false" text="Interviewing" textFill="WHITE" />
+                  <RadioButton fx:id="accepted" layoutX="316.0" layoutY="34.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="76.0" text="Accepted" textFill="WHITE" />
+                  <RadioButton fx:id="rejected" layoutX="316.0" layoutY="60.0" mnemonicParsing="false" text="Rejected" textFill="WHITE" />
+                  <DatePicker fx:id="dateApplied" layoutX="213.0" layoutY="113.0" />
+                  <Button fx:id="editButton" layoutX="20.0" layoutY="351.0" mnemonicParsing="false" onAction="#onEdit" text="Edit" />
+                  <Button fx:id="DeleteButton" layoutX="101.0" layoutY="351.0" mnemonicParsing="false" onAction="#onDelete" text="Delete" />
+                  <Button fx:id="saveButton" layoutX="350.0" layoutY="351.0" mnemonicParsing="false" onAction="#onSave" text="Save" />
+                  <Button fx:id="dontSaveButton" layoutX="254.0" layoutY="351.0" mnemonicParsing="false" onAction="#onDontSave" text="Don't Save" />
+               </children>
+            </Pane>
+         </children>
+    </AnchorPane>
+  </items>
+</SplitPane>

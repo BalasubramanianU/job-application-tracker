@@ -1,0 +1,53 @@
+Project Setup Instructions:
+
+Follow these steps to set up and run the "oodfinalproject" using Eclipse:
+
+Eclipse Setup : -
+
+1. Import Project:
+	- Download the project as .zip file by choosing Code(right side, beside the project name in github) -> Download ZIP
+	- Unzip the project
+	- Open Eclipse
+	- Navigate to File -> Open -> Open Projects from File System
+	- Choose the unzipped oodfinalproject folder and click Open
+
+2. Configure JavaFX:
+	- Right-click on the project ("oodfinalproject") -> Properties
+	- Go to Libraries -> ModulePath -> Add Library (on the right side pane) -> User Library -> Select JavaFX -> Next -> Apply
+	- Stay inside Libraries -> ClassPath -> Add JARs (on the right side pane)
+	- Navigate inside your project folder -> lib folder -> Choose gson-2.10.1.jar -> Click OK -> Click Apply and Close
+
+
+Run Configuration : -
+
+3. Create Launch Configuration:
+	- Right-click on Main.java -> Run As -> Run Configurations
+	- Create a new launch configuration
+	- Name it the same as the project folder name (e.g., "oodfinalproject")
+	- Ensure you are on the Main tab and check these fields:
+		- Project name: "oodfinalproject"
+		- Main class: "application.Main"
+	- Switch to the Arguments tab:
+		- In the VM arguments, add "--add-modules javafx.controls,javafx.fxml"
+		- UNCHECK the 2 options below the box: "Use the -XstartOnFirstThread argument when launching with SWT" and "Use the -XX:+ShowCodeDetailsInExceptionMessages argument when launching"
+	- Click Apply
+
+4. Run the Project:
+	- From Main.java, right-click and choose Run
+
+
+Using the Resume Helper Feature : -
+
+To utilize the Resume Helper feature, follow these steps to add your ChatGPT API key:
+1. Generate API Key:
+	- Visit OpenAI's website: https://openai.com and log in.
+	- Navigate to the 'API' section.
+	- Click on the lock icon under 'API Keys.'
+	- Create a new secret key.
+	- Optionally, provide a name for the key.
+	- Create the secret key and copy the entire generated key starting with 'sk-'
+2. Add Key to the Code:
+	- Locate your project in Eclipse.
+	- Navigate to: src -> application -> ResumeController.java
+	- On line 32, replace the value of the apiKey String with the newly generated key.
+Now, run the project from Main.java.

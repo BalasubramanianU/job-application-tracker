@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.22324414715719063" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="573.0" prefWidth="872.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #EEEDE7;">
+         <children>
+            <Button fx:id="addAppBtn" layoutX="43.0" layoutY="152.0" mnemonicParsing="false" onAction="#addNewApp" prefHeight="26.0" prefWidth="108.0" text="Add  Application">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Button>
+            <Button fx:id="viewAppBtn" layoutX="40.0" layoutY="208.0" mnemonicParsing="false" onAction="#viewAllApp" prefHeight="26.0" prefWidth="116.0" text="View Applications">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Button>
+            <Button fx:id="applicationStatus" layoutX="40.0" layoutY="260.0" mnemonicParsing="false" onAction="#loadApplicationStatus" text="Application Status">
+
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="homeBtn" layoutX="43.0" layoutY="102.0" mnemonicParsing="false" onAction="#homePane" prefHeight="26.0" prefWidth="108.0" text="Home">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="searchBtn" layoutX="39.0" layoutY="308.0" mnemonicParsing="false" onAction="#searchPane" prefHeight="25.0" prefWidth="117.0" text="Search">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="resumeBtn" layoutX="40.0" layoutY="357.0" mnemonicParsing="false" onAction="#resumeHelper" prefHeight="26.0" prefWidth="116.0" text="Resume Helper">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+         </children></AnchorPane>
+    <AnchorPane fx:id="appPane" minHeight="300.0" minWidth="400.0" style="-fx-background-color: #4a7ba6;">
+         <children>
+         </children></AnchorPane>
+  </items>
+</SplitPane>
